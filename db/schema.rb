@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20140706215900) do
   end
 
   create_table "reviews", force: true do |t|
+    t.string   "book_id"
     t.string   "rating",     null: false
     t.string   "body",       null: false
     t.datetime "created_at"

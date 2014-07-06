@@ -1,0 +1,46 @@
+<h3>Add A New Book</h3>
+
+<%= form_for @book do |f| %>
+
+  <% if @book.errors.any? %>
+    <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+  </div>
+
+  <div>
+    <%= f.label :year %>
+    <%= f.text_field :year %>
+  </div>
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description, :rows => 4, :cols => 50  %>
+  </div>
+
+</br>
+
+<div>
+  <%= f.label :category %>
+  <%= f.select :category, ['Mystery', 'SciFi','Historical','Sports'] %>
+</div>
+
+</br>
+
+   <%= f.submit 'Submit' %>
+<% end %>
+<hr>
+
+<%= link_to 'Back', :back %>

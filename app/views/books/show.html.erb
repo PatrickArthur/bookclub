@@ -1,0 +1,32 @@
+<h3><%= @book.title %></h3>
+
+<ul>
+  <li>Title: <%= @book.title %></li>
+  <li>Author: <%= @book.author %></li>
+  <li>Year: <%= @book.year %></li>
+  <li>Description: <%= @book.description %></li>
+  <li>Category: <%= @book.category %></li>
+</ul>
+
+
+<%= link_to "Add a Review", new_book_review_path(@book, @review), :class => "button"  %>
+
+<h3>Customer Reviews</h3>
+
+<ul>
+
+<% @book.reviews.each do |review| %>
+<li>Rating:<%= review.rating %></li>
+<li>Review: <%= review.body %></li>
+<li>Date: <%= time_ago_in_words(review.created_at) %> ago </li>
+
+</br>
+<hr>
+
+<% end %>
+
+</ul>
+
+<hr>
+
+<%= link_to 'Back', books_path %>
