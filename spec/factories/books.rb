@@ -4,6 +4,6 @@ FactoryGirl.define do
     author "Some Guy"
     year 1950
     description "This is a test"
-    category "Software"
+    category "History"
   end
 end
