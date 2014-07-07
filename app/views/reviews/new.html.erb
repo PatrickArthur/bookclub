@@ -1,15 +1,13 @@
 <h3>Add A Review</h3>
 
-<%= form_for([@book, @book.reviews.build]) do |f| %>
+<%= bootstrap_form_for([@book, @book.reviews.build]) do |f| %>
 
 <div>
-  <%= f.label :rating %>
   <%= f.select :rating, ['1','2','3','4','5'] %>
 </div>
 </br>
 
 <div>
-  <%= f.label :body %>
   <%= f.text_area :body, :rows => 4, :cols => 50 %>
 </div>
 </br>
