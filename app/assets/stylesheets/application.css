@@ -16,7 +16,7 @@
 
 body
 {
-background-image:url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRSZKOkO5vKz4oqG3ZPuA9Ou8Zu5NVfrWyMVq1MW2kD3CXuZttaaw');
+background-image: linear-gradient(to bottom, blue, green);
 }
 
 .navbar-inner {
