@@ -9,7 +9,9 @@
 </ul>
 
 
-<%= link_to "Add a Review", new_book_review_path(@book, @review), :class => "button"  %>
+<%= link_to "Add a Review", new_book_review_path(@book, @review), :class => "button"  %></br>
+<%= link_to 'All Books', books_path %>
+<hr>
 
 <h3>Customer Reviews</h3>
 
@@ -19,8 +21,6 @@
 <li>Rating:<%= review.rating %></li>
 <li>Review: <%= review.body %></li>
 <li>Date: <%= time_ago_in_words(review.created_at) %> ago </li>
-
-</br>
 <hr>
 
 <% end %>
@@ -29,4 +29,3 @@
 
 <hr>
 
-<%= link_to 'Back', books_path %>
