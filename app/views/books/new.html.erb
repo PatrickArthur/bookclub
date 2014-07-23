@@ -1,0 +1,46 @@
+<h3>Add A New Book</h3>
+
+<%= bootstrap_form_for @book do |f| %>
+
+  <% if @book.errors.any? %>
+    <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div>
+
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+
+    <%= f.text_field :author %>
+  </div>
+
+  <div>
+
+    <%= f.text_field :year %>
+  </div>
+
+  <div>
+
+    <%= f.text_area :description, :rows => 4, :cols => 50  %>
+  </div>
+
+</br>
+
+<div>
+
+  <%= f.select :category, ['Mystery', 'SciFi','Historical','Sports'] %>
+</div>
+
+</br>
+
+   <%= f.submit 'Submit' %>
+<% end %>
+<hr>
+
+<%= link_to 'Back', :back %>

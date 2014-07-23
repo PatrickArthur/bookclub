@@ -1,0 +1,11 @@
+<h4> Welcome to the Book Club, a place to share books</h4><hr>
+
+<h3>Book Listing</h3>
+
+  <ul>
+  <% @books.each do |book| %>
+      <li><%= link_to book.title, book_path(book) %>, <%= "#{book.title} (#{book.author}) (#{book.year})" %></li>
+  <% end %>
+  </ul>
+
+  <%= link_to " AddBook", new_book_path, :class => 'glyphicon glyphicon-book'   %>
